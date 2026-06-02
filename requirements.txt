@@ -1,0 +1,6 @@
+discord.py
+supabase
+requests
+flask
+python-dotenv
+google-generativeai
