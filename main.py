@@ -339,6 +339,8 @@ async def on_ready():
     log.info(f"✅ Bot ready: {bot.user} (id={bot.user.id})")
     if not send_affiliate_products.is_running():
         send_affiliate_products.start()
+    # ยิงรอบแรกทันที ไม่รอ 6 ชั่วโมง
+    bot.loop.create_task(send_affiliate_products())
 
 
 @tasks.loop(hours=6)
